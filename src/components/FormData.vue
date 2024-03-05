@@ -68,7 +68,7 @@
           <img class="l-img" :src="logoImgL" alt="" />
           <div class="team-name">{{ ruleForm.nameL }}</div>
           <!-- <div class="score">{{ ruleForm.scoreL }}</div> -->
-          <svg viewBox="0 0 125 115">
+          <svg viewBox="0 0 100 90">
             <defs>
               <linearGradient
                 id="rainbow"
@@ -86,8 +86,8 @@
                 <stop stop-color="#003c83" offset="100%" />
               </linearGradient>
             </defs>
-            <text fill="url(#rainbow)">
-              <tspan font-size="36" font-weight="600" x="30" dy="62">{{ ruleForm.scoreL }}</tspan>
+            <text fill="url(#rainbow)" text-anchor="middle" dominant-baseline="middle" x="50" y="45">
+              <tspan font-size="36" font-weight="600">{{ ruleForm.scoreL }}</tspan>
             </text>
           </svg>
         </div>
@@ -95,7 +95,7 @@
           <img class="r-img" :src="logoImgR" alt="" />
           <div class="team-name">{{ ruleForm.nameR }}</div>
           <!-- <div class="score">{{ ruleForm.scoreR }}</div> -->
-          <svg viewBox="0 0 125 115">
+          <svg viewBox="0 0 100 90">
             <defs>
               <linearGradient
                 id="rainbow"
@@ -113,8 +113,8 @@
                 <stop stop-color="#003c83" offset="100%" />
               </linearGradient>
             </defs>
-            <text fill="url(#rainbow)">
-              <tspan font-size="36" font-weight="600" x="25" dy="62">{{ ruleForm.scoreR }}</tspan>
+            <text fill="url(#rainbow)" text-anchor="middle" dominant-baseline="middle" x="50" y="45">
+              <tspan font-size="36" font-weight="600">{{ ruleForm.scoreR }}</tspan>
             </text>
           </svg>
         </div>
