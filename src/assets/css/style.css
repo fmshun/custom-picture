@@ -1,0 +1,177 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+img[src=""] {
+  opacity: 0;
+}
+
+/*滚动条样式*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9c9c9;
+  -webkit-border-radius: 4px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@font-face {
+  font-family: "优设标题黑";
+  src: url("../fonts/优设标题黑.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "方正兰亭大黑_GBK";
+  src: url("../fonts/方正兰亭大黑_GBK.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "方正兰亭粗黑简";
+  src: url("../fonts/方正兰亭粗黑简.TTF");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "思源黑体";
+  src: url("../fonts/思源黑体.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "思源黑体-Medium";
+  src: url("../fonts/SOURCEHANSANSCN-MEDIUM_0.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "思源黑体-Bold";
+  src: url("../fonts/SourceHanSansCN-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "汉仪雅酷黑-65J";
+  src: url("../fonts/汉仪雅酷黑-65J.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "汉仪雅酷黑-75J";
+  src: url("../fonts/汉仪雅酷黑-75J.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "汉仪雅酷黑-85J";
+  src: url("../fonts/汉仪雅酷黑-85J.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "汉仪雅酷黑-95J";
+  src: url("../fonts/汉仪雅酷黑-95J.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 端内赛事字体 */
+@font-face {
+  font-family: "字魂正酷超级黑-Bold";
+  src: url("../fonts/字魂正酷超级黑-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alibaba-PuHuiTi-Bold";
+  src: url("../fonts/Alibaba-PuHuiTi-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alibaba-PuHuiTi-Heavy";
+  src: url("../fonts/Alibaba-PuHuiTi-Heavy.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "壹心宇宙黑";
+  src: url("../fonts/壹心宇宙黑.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Hiragino Sans GB W3";
+  src: url("../fonts/Hiragino Sans GB W3.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "方正汉真广标";
+  src: url("../fonts/方正汉真广标.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "阿里巴巴普惠体M";
+  src: url("../fonts/阿里巴巴普惠体M.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "REEJI-HonghuangLiGB Black";
+  src: url("../fonts/REEJI-HonghuangLiGB Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
