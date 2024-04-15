@@ -329,7 +329,7 @@ const countStyle = (v: any, n?: any) => {
       top: `${n == 1 || n == 2 ? cur?.top1 : cur.top2}px`,
       left: `${n == 1 ? cur?.left1 : n == 2 ? cur.left2 : cur.left3}px`,
       width: `${n == 1 || n == 2 ? cur?.width1 : cur.width2}px`,
-      "font-size": `${n == 1 || n == 2 ? cur?.size1 : (compeType.value === "1" ? cur.size2 : cur.size2 + 2)}px`,
+      "font-size": `${n == 1 || n == 2 ? cur?.size1 : (compeType.value === "1" ? cur.size2 : cur.size2 + 3)}px`,
     };
   }
 };
@@ -453,7 +453,7 @@ const exportImg = (name: any) => {
   //给a标签的href属性赋值
   bqa.setAttribute("href", imgUrl);
   //给a标签的download属性赋值,表示下载的文件名
-  bqa.setAttribute("download", name + `_${Date.now()}.${ruleForm.imgType}`);
+  bqa.setAttribute("download", name + `_${ruleForm.nameL}vs${ruleForm.nameR}.${ruleForm.imgType}`);
   //调用a标签的点击事件
   bqa.click();
   //移除a标签

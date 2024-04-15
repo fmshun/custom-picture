@@ -16,29 +16,29 @@
         </el-col>
         <el-col :span="18">
           <el-select
-          v-model="ruleForm.channels"
-          multiple
-          clearable
-          filterable
-          collapse-tags
-          placeholder="请选择渠道"
-        >
-          <template #header>
-            <el-checkbox
-              v-model="checkAll"
-              :indeterminate="indeterminate"
-              @change="handleCheckAll"
-            >
-              全选
-            </el-checkbox>
-          </template>
-          <el-option
-            v-for="(v, k) in channelOpions"
-            :label="v.name"
-            :value="v.name"
-            :key="k"
-          />
-        </el-select>
+            v-model="ruleForm.channels"
+            multiple
+            clearable
+            filterable
+            collapse-tags
+            placeholder="请选择渠道"
+          >
+            <template #header>
+              <el-checkbox
+                v-model="checkAll"
+                :indeterminate="indeterminate"
+                @change="handleCheckAll"
+              >
+                全选
+              </el-checkbox>
+            </template>
+            <el-option
+              v-for="(v, k) in channelOpions"
+              :label="v.name"
+              :value="v.name"
+              :key="k"
+            />
+          </el-select>
         </el-col>
       </el-form-item>
       <el-form-item label="左边战队" prop="nameL">
@@ -48,7 +48,12 @@
           placeholder="请选择左边战队"
           @change="teamLChange"
         >
-          <el-option v-for="(v, k) in teams" :label="v" :value="v" :key="k" />
+          <el-option
+            v-for="(v, k) in teams"
+            :label="v.replace('广州', '龙狮')"
+            :value="v"
+            :key="k"
+          />
         </el-select>
       </el-form-item>
       <el-form-item label="右边战队" prop="nameR">
@@ -58,7 +63,12 @@
           placeholder="请选择右边战队"
           @change="teamRChange"
         >
-          <el-option v-for="(v, k) in teams" :label="v" :value="v" :key="k" />
+          <el-option
+            v-for="(v, k) in teams"
+            :label="v.replace('广州', '龙狮')"
+            :value="v"
+            :key="k"
+          />
         </el-select>
       </el-form-item>
       <el-form-item label="预告/结果" required>
@@ -171,7 +181,7 @@
                 <img class="l-img" :src="logoImgL" alt="" />
               </div>
               <div class="team-name">
-                {{ ruleForm.nameL.replace(/\s/g, "&nbsp;") }}
+                {{ ruleForm.nameL }}
               </div>
             </div>
             <div class="team-r" :style="countStyle(item, 2)">
@@ -179,7 +189,7 @@
                 <img class="r-img" :src="logoImgR" alt="" />
               </div>
               <div class="team-name">
-                {{ ruleForm.nameR.replace(/\s/g, "&nbsp;") }}
+                {{ ruleForm.nameR }}
               </div>
             </div>
           </div>
@@ -230,15 +240,22 @@ interface RuleForm {
   imgType: string;
 }
 
-const onlyImgs = ref(["小米 1056x594", "海信 411x232", "华为 1280x720赛果","小米季后赛 1056x594", "海信季后赛 411x232", "华为季后赛 1280x720赛果"]); // 纯素图
+const onlyImgs = ref([
+  "小米 1056x594",
+  "海信 411x232",
+  "华为 1280x720赛果",
+  "小米季后赛 1056x594",
+  "海信季后赛 411x232",
+  "华为季后赛 1280x720赛果",
+]); // 纯素图
 const noRightChannels = ref(["海信 560x315", "海信季后赛 560x315"]); // 无右边背景图的渠道
 const noStartTime = ref(["小米 1632x720", "小米季后赛 1632x720"]); // 无赛事预告时间的
 const needRadius = ref(["当贝 824x303", "当贝季后赛 824x303"]); // 模板有圆角的
 
 const checkAll = ref(false);
 const indeterminate = ref(false);
-const compClassify = ref('0');
-const channelOpions = ref(constant.CBA_CHANNEL['0']);
+const compClassify = ref("0");
+const channelOpions = ref(constant.CBA_CHANNEL["0"]);
 const teams = ref(constant.CBA_LOGO);
 let compeType = ref("1"); // 赛事预告和赛事结果类型
 let logoImgL = ref<string>(""); // 左右战队logo
@@ -458,7 +475,10 @@ const exportImg = (name: any) => {
   //给a标签的href属性赋值
   bqa.setAttribute("href", imgUrl);
   //给a标签的download属性赋值,表示下载的文件名
-  bqa.setAttribute("download", name + `_${Date.now()}.${ruleForm.imgType}`);
+  bqa.setAttribute(
+    "download",
+    name + `_${ruleForm.nameL}vs${ruleForm.nameR}.${ruleForm.imgType}`
+  );
   //调用a标签的点击事件
   bqa.click();
   //移除a标签

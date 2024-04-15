@@ -448,7 +448,7 @@ const exportImg = (name: any) => {
   //给a标签的href属性赋值
   bqa.setAttribute("href", imgUrl);
   //给a标签的download属性赋值,表示下载的文件名
-  bqa.setAttribute("download", name + `_${Date.now()}.${ruleForm.imgType}`);
+  bqa.setAttribute("download", name + `_${ruleForm.nameL}vs${ruleForm.nameR}.${ruleForm.imgType}`);
   //调用a标签的点击事件
   bqa.click();
   //移除a标签
