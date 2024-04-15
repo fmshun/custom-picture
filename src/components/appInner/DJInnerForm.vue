@@ -169,7 +169,11 @@
           >
             德甲{{ ruleForm.title }}
           </div>
-          <div v-else-if="item != '小米 1056x594'" class="which-round" :style="countStyle(item, 4)">
+          <div
+            v-else-if="item != '小米 1056x594'"
+            class="which-round"
+            :style="countStyle(item, 4)"
+          >
             <div>德国足球甲级联赛</div>
             <div class="round-num">{{ ruleForm.title }}</div>
           </div>
@@ -287,7 +291,7 @@ const rules = reactive<FormRules<RuleForm>>({
 });
 
 const allImgs = ref([]);
-const showDialog:any = inject('showFullDialog');
+const showDialog: any = inject("showFullDialog");
 
 // 渠道更改监听
 watch(
@@ -332,7 +336,7 @@ const countStyle = (v: any, n?: any) => {
       top: `${n == 1 || n == 2 ? cur?.top1 : cur.top2}px`,
       left: `${n == 1 ? cur?.left1 : n == 2 ? cur.left2 : cur.left3}px`,
       width: `${n == 1 || n == 2 ? cur?.width1 : cur.width2}px`,
-      "font-size": `${n == 1 || n == 2 ? cur?.size1 : cur.size2}px`,
+      "font-size": `${n == 1 || n == 2 ? cur?.size1 : (compeType.value === "1" ? cur.size2 : cur.size2 + 2)}px`,
     };
   }
 };

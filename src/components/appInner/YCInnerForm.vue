@@ -332,7 +332,7 @@ const countStyle = (v: any, n?: any) => {
       top: `${n == 1 || n == 2 ? cur?.top1 : cur.top2}px`,
       left: `${n == 1 ? cur?.left1 : n == 2 ? cur.left2 : cur.left3}px`,
       width: `${n == 1 || n == 2 ? cur?.width1 : cur.width2}px`,
-      "font-size": `${n == 1 || n == 2 ? cur?.size1 : cur.size2}px`,
+      "font-size": `${n == 1 || n == 2 ? cur?.size1 : (compeType.value === "1" ? cur.size2 : cur.size2 + 2)}px`,
     };
   }
 };
